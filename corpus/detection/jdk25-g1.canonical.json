@@ -1,0 +1,39 @@
+{
+  "coverage": {
+    "total_physical_lines": 120,
+    "recognized_metadata_records": 31,
+    "recognized_gc_records": 89,
+    "unknown_gc_records": 0,
+    "parsed_events": 6,
+    "complete_events": 6,
+    "incomplete_events": 0,
+    "parse_warnings": 0,
+    "segments_detected": 1
+  },
+  "cycles": [
+    {"gc_id": 0, "cycle_type": "young_collection", "duration_ns": 4735000, "before_mib": 18, "after_mib": 4, "phase_count": 5, "start_line": 27, "end_line": 40},
+    {"gc_id": 1, "cycle_type": "young_collection", "duration_ns": 3084000, "before_mib": 15, "after_mib": 5, "phase_count": 5, "start_line": 41, "end_line": 54},
+    {"gc_id": 2, "cycle_type": "young_collection", "duration_ns": 726000, "before_mib": 18, "after_mib": 5, "phase_count": 5, "start_line": 55, "end_line": 68},
+    {"gc_id": 3, "cycle_type": "young_collection", "duration_ns": 635000, "before_mib": 21, "after_mib": 5, "phase_count": 5, "start_line": 69, "end_line": 82},
+    {"gc_id": 4, "cycle_type": "young_collection", "duration_ns": 650000, "before_mib": 23, "after_mib": 5, "phase_count": 5, "start_line": 83, "end_line": 96},
+    {"gc_id": 5, "cycle_type": "full_collection", "duration_ns": 4711000, "before_mib": 8, "after_mib": 2, "phase_count": 5, "start_line": 97, "end_line": 115}
+  ],
+  "first_cycle": {
+    "uptime_start_ns": 369000000,
+    "uptime_end_ns": 373000000,
+    "elapsed_ns": 4000000,
+    "cause": "G1 Evacuation Pause",
+    "metaspace_before_bytes": 8783872,
+    "metaspace_committed_bytes": 8912896,
+    "class_space_before_bytes": 1048576,
+    "phase_durations_ns": [30000, 40000, 3700000, 330000, 120000],
+    "cpu_user_ns": 20000000,
+    "cpu_system_ns": 0,
+    "cpu_real_ns": 10000000
+  },
+  "full_cycle": {
+    "cause": "System.gc()",
+    "phase_start_ns": [422000000, 424000000, 424000000, 425000000, 426000000],
+    "phase_durations_ns": [1892000, 632000, 1058000, 716000, 32000]
+  }
+}

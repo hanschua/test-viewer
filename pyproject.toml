@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "universal-java-gc-viewer"
+version = "0.1.0"
+description = "Offline, provenance-aware Java GC log analysis"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+gcviewer = "gcviewer.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "hypothesis>=6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gcviewer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

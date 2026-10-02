@@ -1,0 +1,39 @@
+{
+  "scope": "framework_only",
+  "provenance": "Scored-candidate example in plan.md section 14, plus framework boundary cases; these are not captured VM logs or parser support claims.",
+  "cases": [
+    {
+      "id": "plan-close-unified-candidates",
+      "candidates": [
+        {"grammar": "hotspot_unified", "score": 0.72},
+        {"grammar": "azul_prime_unified", "score": 0.68}
+      ],
+      "expected_status": "ambiguous",
+      "expected_selected": null
+    },
+    {
+      "id": "exact-tie",
+      "candidates": [
+        {"grammar": "hotspot_unified", "score": 0.8},
+        {"grammar": "azul_prime_unified", "score": 0.8}
+      ],
+      "expected_status": "ambiguous",
+      "expected_selected": null
+    },
+    {
+      "id": "distinct-winner",
+      "candidates": [
+        {"grammar": "hotspot_unified", "score": 0.91},
+        {"grammar": "azul_prime_unified", "score": 0.62}
+      ],
+      "expected_status": "selected",
+      "expected_selected": "hotspot_unified"
+    },
+    {
+      "id": "weak-evidence",
+      "candidates": [{"grammar": "hotspot_unified", "score": 0.4}],
+      "expected_status": "unknown",
+      "expected_selected": null
+    }
+  ]
+}

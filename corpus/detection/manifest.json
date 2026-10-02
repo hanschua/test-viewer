@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scope": "detection_only",
+  "fixtures": [
+    {
+      "id": "hotspot-jdk25-g1-detection-001",
+      "path": "jdk25-g1.log",
+      "golden_path": "jdk25-g1.golden.json",
+      "source_kind": "captured",
+      "provenance": "Locally captured Temurin 25.0.3+9 using tools/CaptureGC.java; see README.md",
+      "license": "CC0-1.0",
+      "vendor": "unknown",
+      "vm_family": "hotspot",
+      "java_version": "25.0.3+9-LTS",
+      "collector": "g1",
+      "grammar": "hotspot_unified",
+      "logging_options": ["-Xms32m", "-Xmx32m", "-XX:+UseG1GC", "-Xlog:gc*=info"],
+      "features": ["detection_only", "gc_envelope", "gc_id", "startup_version", "collector_declaration"],
+      "expected_unknown_gc_records": null,
+      "capability_state": "experimental"
+    }
+  ]
+}
